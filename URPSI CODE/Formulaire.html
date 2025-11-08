@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="STYLE.css">
+    <link rel="shortcut icon" href="images/spidey winter.jpg" type="image/x-icon">
 </head>
 <body>
     
     <h1>LES FORMULAIRES</h1>
-    
+    <fieldset>
     <form action="">
-        <label for="nm"> Nom </label>
+        <label for="nm"> Nom et Prénom</label>
         
-       <input type="text" id="nm" placeholder="Your name" size="50%" maxlength="8" minlength="4" required>
+       <input type="text" id="nm" placeholder="Your name" size="50%" maxlength="20" minlength="4" required>
         
     <label for="">Password</label>
         <input type="password" placeholder="Choose a strong password">
@@ -51,17 +53,69 @@
     <label for="">Numéro de téléphone</label>
     <input type="tel" name="" id="" placeholder="ex: 0674652486" pattern="^0 [1-9] [0-9]{8}$" maxlength="10">
     
+</fieldset>
+
     <br>
      <H1>Choisir votre langage préféré </H1>
-    <input type="radio" name="" id=""> <label for="">HTML</label><BR>
-    <input type="radio" name="" id=""> <label for="">CSS</label><BR>
-    <input type="radio" name="" id=""> <label for="">JS</label><BR>
-    <input type="radio" name="" id=""> <label for="">PHP</label><BR>
+    <input type="radio" name="" id="c1"> <label for="">HTML</label><BR>
+    <input type="radio" name="" id="c1"> <label for="">CSS</label><BR>
+    <input type="radio" name="" id="c1"> <label for="">JS</label><BR>
+    <input type="radio" name="" id="c1"> <label for="">PHP</label><BR>
+        <br>
+    <H1>Choisir vos langages préférés </H1>
+    <input type="checkbox" name="" id=""> <label for="">HTML</label><BR>
+    <input type="checkbox" name="" id=""> <label for="">CSS</label><br>
+    <input type="checkbox" name="" id=""> <label for="">JS</label><BR>
+    <input type="checkbox" name="" id=""> <label for="">PHP</label>
+
+<br>
+
+<p>Choisir votre Wilaya</p>
+<select name="" id="" >
+<option value="" disabled selected>--Choisissez votre Wilaya--</option>
+
+<optgroup label="Nord">
+<option value="">Alger</option>
+<option value="">Oran</option>
+<option value="">Constantine</option>
+<option value="">Annaba</option>
+</optgroup>   
+
+<optgroup label="Centre">
+<option value="">Jijel</option>
+<option value="">Tizi</option>
+<option value="">Médéa</option>
+<option value="">Bouira</option>
+</optgroup>
+
+<optgroup label="Sud">
+<option value="">Adrar</option> 
+<option value="">Tamanrasset</option>
+<option value="">El Oued</option>
+<option value="">Illizi</option>
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</select>
 
 
 
