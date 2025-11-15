@@ -1,4 +1,15 @@
 
+/* REVOIR LE TEXT SHADOW A LA MAISON */
+body{
+    background-color: rgb(217, 217, 217);
+    background-image: url(images/ge\ elites\ \(2\).png);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position: center;
+    
+}   
+
 
 .liste{
     color: rgb(66, 235, 71);
@@ -15,13 +26,28 @@
     text-decoration-color: rgb(123, 0, 255);
     text-decoration:dotted underline 5px red ;
     letter-spacing:0.2cap;
-    text-shadow: red (177,30,30) 0px 0px 2px;
+    text-align: center;
+    text-shadow:0px 0px 4px rgb(251, 255, 0);
+    background-color: rgb(29, 32, 164);
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+
+
+
+
 }
 
+p{
+    text-align: justify;
+    text-indent: 20px;
+    white-space:initial;
+}
 
 h1{
     color: rgb(255, 0, 0);
 }
+
 
 
 
