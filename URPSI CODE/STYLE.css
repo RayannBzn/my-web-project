@@ -1,6 +1,30 @@
-label
-{color: rgb(0, 81, 255);}
 
-input
-{color: red;}
 
+.liste{
+    color: rgb(66, 235, 71);
+}  
+
+
+ h1, h2{
+    
+    font-family: "Momo Signature", cursive;
+    font-size: 1.4em;
+    font-weight: bold;
+    font-style:italic ;
+    font: italic bold 1.4em "Momo Signature", cursive;
+    text-decoration-color: rgb(123, 0, 255);
+    text-decoration:dotted underline 5px red ;
+    letter-spacing:0.2cap;
+    text-shadow: red (177,30,30) 0px 0px 2px;
+}
+
+
+h1{
+    color: rgb(255, 0, 0);
+}
+
+
+
+
+
+/* use google font for additional fonts for web desingn */
