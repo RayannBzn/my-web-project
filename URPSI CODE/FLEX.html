@@ -19,21 +19,28 @@ header{
 
 div {
     display: flex;
+    border: solid black;
 }
 
-nav, aside {
+.row {
     background-color: rgb(92, 91, 91);
     padding: 10px;
     height: 300px;
     flex: 2;
     font-family: fantasy;
+    justify-content: space-between;
+    border: 2px solid black;
+
 }
+
+
 
 main {
     padding: 10px;
     height: 300px;
     background-color: #efefef;
     flex: 1;
+    border: solid black;
 }
 
 footer {
@@ -42,7 +49,51 @@ footer {
     text-align: center;
     font-size: 35px;
     font-family:fantasy ;
+    border: solid black;
 }
+
+@media (max-width: 600px) {
+.row {
+    flex-direction: column;
+}
+    
+
+} 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
