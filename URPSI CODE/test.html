@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GROUPE SCOLAIRE GENERATION ELITES</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /* Full page logo background */
+            background-image: url('/URPSI CODE/images/ge elites (2).png');
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 1200px 800px; /* This makes it cover the whole page */
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Semi-transparent overlay for readability */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(248, 249, 250, 0.85); /* Light overlay */
+            z-index: -1;
+        }
+
+        /* Header styles */
+        header {
+            background: linear-gradient(135deg, rgba(5, 39, 114, 0.95) 0%, rgba(87, 137, 199, 0.95) 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .school-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-right: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .school-motto {
+            font-size: 1rem;
+            font-style: italic;
+            opacity: 0.9;
+        }
+
+        /* MAC-STYLE DOCK NAVIGATION */
+        .mac-dock-nav {
+            position: sticky;
+            top: 20px;
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .dock {
+            display: flex;
+            align-items: end;
+            background: rgba(255, 255, 255, 0.95);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: 24px;
+            padding: 12px 24px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+            gap: 8px;
+        }
+
+        .dock-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 12px 8px;
+            border-radius: 16px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            min-width: 80px;
+        }
+
+        .dock-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #1a4a8f, #4b8ad6);
+            border-radius: 14px;
+            color: white;
+            font-size: 20px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(26, 74, 143, 0.3);
+            margin-bottom: 6px;
+        }
+
+        .dock-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #1a4a8f;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        /* Hover Effects */
+        .dock-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .dock-item:hover .dock-icon {
+            transform: scale(1.15);
+            background: linear-gradient(135deg, #2c6bb8, #4a86e8);
+            box-shadow: 0 8px 25px rgba(26, 74, 143, 0.4);
+        }
+
+        .dock-item:hover .dock-label {
+            color: #2c6bb8;
+            font-weight: 700;
+        }
+
+        /* Active State */
+        .dock-item.active .dock-icon {
+            background: linear-gradient(135deg, #ffd700, #ffed4e);
+            color: #1a4a8f;
+            box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+        }
+
+        .dock-item.active .dock-label {
+            color: #1a4a8f;
+            font-weight: 700;
+        }
+
+        /* Magnification effect for neighbors */
+        .dock:hover .dock-item:not(:hover) .dock-icon {
+            transform: scale(0.95);
+            opacity: 0.8;
+        }
+
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(26, 74, 143, 0.85), rgba(26, 74, 143, 0.9)), url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 6rem 2rem;
+            margin: 20px auto;
+            border-radius: 20px;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: #ffd700;
+            color: #1a4a8f;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border: 2px solid #ffd700;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: #ffd700;
+            transform: translateY(-2px);
+        }
+
+        /* Sections */
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #1a4a8f;
+            font-size: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 2.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            background: white;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #2c6bb8;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: #1a4a8f;
+            font-size: 1.4rem;
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(26, 74, 143, 0.95);
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ccc;
+            margin-bottom: 0.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo-container {
+                margin-bottom: 1rem;
+            }
+            
+            .dock {
+                padding: 10px 16px;
+                border-radius: 20px;
+            }
+            
+            .dock-item {
+                min-width: 60px;
+                padding: 8px 4px;
+            }
+            
+            .dock-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+            
+            .dock-label {
+                font-size: 10px;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- Header with school name -->
+    <header>
+        <div class="header-content">
+            <div class="logo-container">
+                <img src="/URPSI CODE/images/ge elites (2).png" alt="GROUPE SCOLAIRE GENERATION ELITES" class="school-logo">
+                <div>
+                    <h1 class="school-name">GROUPE SCOLAIRE GENERATION ELITES</h1>
+                    <p class="school-motto">Former les leaders de demain</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <p><i class="fas fa-phone"></i> +213 XXX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@generationelites.edu.dz</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mac-style Dock Navigation -->
+    <nav class="mac-dock-nav">
+        <div class="dock">
+            <a href="#accueil" class="dock-item active">
+                <div class="dock-icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <span class="dock-label">Accueil</span>
+            </a>
+            <a href="#ecole" class="dock-item">
+                <div class="dock-icon">
+                    <i class="fas fa-school"></i>
+                </div>
+                <span class="dock-label">Notre École</span>
+            </a>
+            <a href="#programmes" class="dock-item">
+                <div class="dock-icon">
+                    <i class="fas fa-book-open"></i>
+                </div>
+                <span class="dock-label">Programmes</span>
+            </a>
+            <a href="#admissions" class="dock-item">
+                <div class="dock-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <span class="dock-label">Admissions</span>
+            </a>
+            <a href="#activites" class="dock-item">
+                <div class="dock-icon">
+                    <i class="fas fa-futbol"></i>
+                </div>
+                <span class="dock-label">Activités</span>
+            </a>
+            <a href="#contact" class="dock-item">
+                <div class="dock-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <span class="dock-label">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue au Groupe Scolaire Génération Élites</h1>
+            <p>Un établissement d'excellence dédié à la formation des futures élites algériennes</p>
+            <a href="#admissions" class="cta-button">Postuler maintenant</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section">
+        <h2 class="section-title">Nos Points Forts</h2>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-user-graduate feature-icon"></i>
+                <h3>Enseignement d'Excellence</h3>
+                <p>Un corps professoral qualifié et des méthodes pédagogiques innovantes.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-flask feature-icon"></i>
+                <h3>Laboratoires Modernes</h3>
+                <p>Des équipements scientifiques de pointe pour un apprentissage pratique.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-laptop-code feature-icon"></i>
+                <h3>Technologie Éducative</h3>
+                <p>Intégration des nouvelles technologies dans le processus d'apprentissage.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-globe feature-icon"></i>
+                <h3>Ouverture Internationale</h3>
+                <p>Programmes d'échanges et partenariats avec des établissements internationaux.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>GROUPE SCOLAIRE GENERATION ELITES</h3>
+                <p>Former les leaders de demain grâce à un enseignement d'excellence et des valeurs fortes.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Liens Rapides</h3>
+                <a href="#accueil">Accueil</a>
+                <a href="#ecole">Notre École</a>
+                <a href="#programmes">Programmes</a>
+                <a href="#admissions">Admissions</a>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Alger, Algérie</p>
+                <p><i class="fas fa-phone"></i> +213 XXX XX XX XX</p>
+                <p><i class="fas fa-envelope"></i> contact@generationelites.edu.dz</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 GROUPE SCOLAIRE GENERATION ELITES. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Active navigation handling
+        document.addEventListener('DOMContentLoaded', function() {
+            const dockItems = document.querySelectorAll('.dock-item');
+            
+            dockItems.forEach(item => {
+                item.addEventListener('click', function(e) {
+                    dockItems.forEach(i => i.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
