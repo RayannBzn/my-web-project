@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
+<style>
+body {
+    background-color: #1a1a1a;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.topnav {
+  background: rgb(13, 23, 57);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 15px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topnav a {
+  color: white;
+  padding: 12px 18px;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.topnav a:hover {
+  background: #8e2de2;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 134, 134, 0.4);
+  color: white;
+}
+
+.topnav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 500px;
+   background-image: 
+   url(images/programming-background-with-person-working-with-codes-computer.jpg);
+text-align: center;
+background-size: cover;
+background-position: center;
+
+}
+
+H1{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 100px;
+    text-shadow: 2px 2px 4px #000000;
+}
+P{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+/* From Uiverse.io by adamgiebl */ 
+.cssbuttons-io {
+  position: relative;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  border-radius: 0.8em;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(to right, #8e2de2, #4a00e0);
+  color: ghostwhite;
+  overflow: hidden;
+}
+
+.cssbuttons-io svg {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+}
+
+.cssbuttons-io span {
+  position: relative;
+  z-index: 10;
+  transition: color 0.4s;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.8em 1.2em 0.8em 1.05em;
+}
+
+.cssbuttons-io::before,
+.cssbuttons-io::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.cssbuttons-io::before {
+  content: "";
+  background: #000;
+  width: 120%;
+  left: -10%;
+  transform: skew(30deg);
+  transition: transform 0.4s cubic-bezier(0.3, 1, 0.8, 1);
+}
+
+.cssbuttons-io:hover::before {
+  transform: translate3d(100%, 0, 0);
+}
+
+.cssbuttons-io:active {
+  transform: scale(0.95);
+}
+
+
+</style>
+</head>
+<body>
+ <div class="topnav">
+
+<a href=""><i class="fa-solid fa-house"></i> Home</a>
+<a href=""><i class="fa-solid fa-bell-concierge"></i> Services</a>
+<a href=""><i class="fa-solid fa-address-book"></i> Contact</a>
+
+<div class="topnav-right"><br>
+    <a href=""><i class="fa-solid fa-magnifying-glass"></i> Search</a>
+    <a href=""><i class="fa-solid fa-circle-info"></i> About</a>
+
+</div>
+</div>   
+
+
+<div class="container">
+
+<h1>MY WEB PAGE</h1>
+<p>Description of the website</p><br>
+<!-- From Uiverse.io by adamgiebl --> 
+<button class="cssbuttons-io">
+  <span
+    ><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 0h24v24H0z" fill="none"></path>
+      <path
+        d="M24 12l-5.657 5.657-1.414-1.414L21.172 12l-4.243-4.243 1.414-1.414L24 12zM2.828 12l4.243 4.243-1.414 1.414L0 12l5.657-5.657L7.07 7.757 2.828 12zm6.96 9H7.66l6.552-18h2.128L9.788 21z"
+        fill="currentColor"
+      ></path>
+    </svg>
+    CLICK HERE !</span
+  >
+</button>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
