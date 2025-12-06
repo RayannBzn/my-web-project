@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">   
 <style>
 body {
-    background-color: #1a1a1a;
+    background-color: #ffffff;
     margin: 0;
     padding: 0;
     font-family: 'Lato', sans-serif;
@@ -139,7 +139,35 @@ P{
   transform: scale(0.95);
 }
 
-
+.container2 {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+  
+}
+.responsive {
+    flex: 1;
+    padding: 10px; 
+    margin: 20px;
+    border: #000000 solid 2px;
+    
+}
+.responsive img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+ }
+ .responsive:hover img {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgb(136, 0, 255);
+ }
+.responsive p {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #000000;
+}
 </style>
 </head>
 <body>
@@ -153,6 +181,8 @@ P{
     <a href=""><i class="fa-solid fa-magnifying-glass"></i> Search</a>
     <a href=""><i class="fa-solid fa-circle-info"></i> About</a>
 
+  <div class="top nav-right"></div>
+  <a href="INSCR.html">Register</a>
 </div>
 </div>   
 
@@ -174,13 +204,23 @@ P{
     CLICK HERE !</span
   >
 </button>
-
-
-
 </div>
 
+<div class="container2"> 
+        <div class="responsive">
+<img src="images/NYC.png" alt="">
+<p>IMAGE1</p>
+</div>
 
+        <div class="responsive">
+<img src="images/NYC.png" alt="">
+<p>IMAGE2</p>
+</div>
 
-
+        <div class="responsive">
+<img src="images/NYC.png" alt="">
+<P>IMAGE3</P>
+</div>
+</div>
 </body>
 </html>
