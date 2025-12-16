@@ -1,184 +1,46 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>rayan</title>
-    <link rel="stylesheet" href="STYLE.css"><link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="STYLE.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Momo+Signature&display=swap" rel="stylesheet">
+    <script src="traitement.js" defer></script>
 </head>
 <body>
-<!-- HEADINGS -->
-    <h1>titre1</h1>
-    <h2>titre2</h2>
-    <h3>titre1</h3>
-
-<!-- PARAGRAPHE -->
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam consequuntur quos dicta magnam distinctio tempore numquam nihil quasi dolorem repellendus iure amet, alias hic maxime itaque nesciunt perspiciatis. Tempora, sit!
-
-<!-- style écriture -->
-<strong>gras1</strong>
-<b>gras2</b>
-
-<em>italic</em>
-<I>italic</I>
-
-<ins>souigne1</ins>
-<u>souligne2</u>
-
-<!-- BR est utilisé pour sauter la ligne -->
-<mark>marque</mark><br>
-
-<hr>
-
-
-<h1 id="liste">LISTE</h1>
-
-<h2>LISTE ORDONNEE</h2>
-<!-- OL = POUR LES RACCOURCIS /  IL pour le contenu de chaque position -->
-<ol ><li>HTML</li>
-<li>CSS</li>
-<li>PHP</li>
-<li>JS</li></ol>
-
-<H2>Liste non ordonnée avec puces</H2>
-<!-- TYPE (dot,circle,square) -->
-<ul type="dot">
-    <li>HTML</li>
-    <li>JS</li>
-    <li>CSS</li>
-    <li>PHP</li><hr>
-<!-- DT EST POUR LE MOT, DD EST POUR SA DESCRIPTION -->
-    <H2>LISTE DESCRIPTIVE</H2>
-<DT>HTML</DT>
-<DD>HTML EST....</DD><BR></BR>
-
-<DT>CSS</DT>
-<DD>CSS EST...</DD><BR></BR>
-
-<DT>JAVA</DT>
-<DD>JAVA EST...</DD>
-
-
-<h2>LISTE HYBRIDE</h2>
-<ol>
-    <li>PROGRAMMATION WEB</li>
-<ol type="a">
+   
+    <h1 id="demo">Introduction</h1>
+    <br><br>
     
-<li>HTML</li>
-<li>CSS</li>
-<li>JS</li>
-<li>PHP</li>
-</ol><br>
-
-
-<li>PROGRAMMATION MOBILE</li>
-<ol type="a">
     
-<li>JS</li>
-<li>PYTHON</li> <BR></BR>
-</ol>
-<!-- FLECHE POUR POP INFO -->
-<DETAils>
-    <SUMMARy>HTML</SUMMARy>
-    <p>HTML EST....</p>
-</DETAils>
-<!-- POPUP BULLE INFO -->
-<abbr title="RAYAN BOUZIANE">RB</abbr><BR></BR>
+    
+    <button onclick="rayan()">Click me !</button>
+    <br><br>
+    
+    <button onclick="document.getElementById('myImage').style.width='150px'">
+    Make Small
+</button>
 
-<!-- SUB POUR LES CARACTERES INFERIEUR -->
-H<sub>2</sub>O <BR></BR>
+<button onclick="document.getElementById('myImage').style.width='300px'">
+    Make Normal
+</button>
+    
+    
+    <img id="myImage" src="https://as2.ftcdn.net/v2/jpg/13/63/79/91/1000_F_1363799113_hgNzPD8CKHvcv0cCnEOVrQ0q6yQuIK7i.jpg" alt="">
+    <button onclick="changeimg()">Image suivante</button>
 
-<!-- SUP POUR LES CARACTERES SUPERIEURS -->
-X <sup>4</sup>
-
-
-<PRE>
-    RAYAN
-      OTHMANE
-        BOUZIANE
-</PRE>
-
-<!-- SESSION 2 -->
-
-<h1>LES LIENS </h1>
-
-<a href="https://www.youtube.com">Lien vers Youtube</a><br>
-
-<BR></BR>
-
-<a href="https://w3schools"target="_blank"rel="noopener noreferrer">w3schools</a><br>
 <br>
-<p>voir <a href="index2.html" title="site de dévelopemment">la page home</a></p>
 
+<h1 class="liste" style="color: yellow;">Liste 1</h1>
+<h1 class="liste" style="color: yellow;">Liste 2</h1>
+<h1 class="liste" style="color: yellow;">Liste 3</h1>
+<h1 class="liste" style="color: yellow;">Liste 4</h1>
+ 
 
-<H1>TABLEAU</H1>
-
-<TABle border="4" cellpadding="6" cellspacing="2" >
-<tr>
-<!-- "colspan" est un attribut qui permet de fusionner plusieurs cellules horizontales dans un tableau HTML--> 
-<th  colspan="3" bgcolor="lightslategray">Liste des étudiants</th>
-<!-- <td></td>
-<td></td> -->
-
-</tr>
-<TR>
-  <th bgcolor="lightgreen">Nom</th>
-  <th bgcolor="yellow">Prénom</th>
-  <th>Groupe</th>
-</TR>
-
-<tr>
-<!-- "rowspan" est un attribut qui permet de fusionner plusieurs cellules verticales dans un tableau HTML--> 
-    <td>N1</td>
-    <td>P1</td>
-    <td rowspan="2">G2</td>
-
-</tr>
-
-<TR>
-    <TD>N2</TD>
-    <TD>P2</TD>
-    <!-- <TD>g2</TD> -->
-
-</TR>
-
-<tr>
-<td>N3</td>
-<td>P3</td>
-<td>G1</td>
-
-
-</tr>
-
-
-</TABle>
-
-<h1>IMAGES</h1>
-<figure>
-    <img src="images/NYC.png" alt=""width="40%" height="50%" title="New York City">
-    <img src="images/NYC.png" alt="" width="40%" height="50%" title="New York City">
-<figcaption>Image de New York City</figcaption>
-
-</figure>
-
-<h1>Intégration de photo en forme de lien cliquable</h1>
-<a href="https://www.istockphoto.com/photos/new-york-state" target="_blank"><img src="images/NYC.png" alt="" width="20%"></a>
-
-<BR></BR>
-
-<h1>Intégration de vidéo</h1>
-<!-- Iframe doit se faire en prenant le code source d'une vidéo youtube dans l'option partage -->
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Vg1mpD1BICI?si=9C8j7HlBXLQ1bAKN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
-
-
-
-
-
+<button oneclick="rayan">pull</button>
 
 
 
