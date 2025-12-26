@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caca</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+body{
+background-color: #a3a3a3;
+align-items: center;
+display: flex;
+height: 100vh;
+justify-content: center;
+}
+
+form {
+    padding: 20px;
+    width: 400px;
+    margin: 50px auto;
+    border-radius:8px ;
+    background-color: #000000;
+}
+
+.container{
+   display: flex;
+   width: 100%;
+   
+}
+.icon{
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    background-color: rgb(255, 0, 0);
+    text-align: center;
+    min-width: 30px;
+    border-radius: 10px;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+}
+
+.smooth-button{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+    border-radius: 10px;
+    position: relative;
+    /* ADDED transition property to the default state */
+    transition: transform 0.3s ease, background-color 0.3s ease; 
+}
+
+.smooth-button:hover{
+    background-color: #ff0000;
+    box-shadow: #ff7d7d 0px 2px 15px;
+    /* ADDED transform property to the hover state for movement */
+    transform: translateY(-5px); 
+}
+
+.caca{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.caca:hover{
+    background-color: #002fff;
+    transform:translateY(-9px)
+}
+    </style>
+</head>
+<body>
+ <div class="form">
+    <form action="">
+        
+    <div class="container">
+        <i class="fa-solid fa-user-astronaut icon"></i>
+<input type="text" id="usr" name="username" placeholder="Username" required>
+</div>
+<br><br>
+
+     <div class="container">
+        <i class="fa-solid fa-envelope icon"></i>
+<input type="email" id="email" name = "email" placeholder="email">
+ </div>
+<br><br>
+
+        <div class="container">
+            <i class="fa-solid fa-key icon"></i>
+<input type="password" id="pass" name="password" placeholder="Password" required>
+</div>
+<br><br>
+
+<button class="smooth-button">Hop in</button>
+
+
+</form>
+<button class="caca">caca</button>
+
+</body>
+</html>
